@@ -44,9 +44,9 @@ app.get("/secondpage", function (req, res) {
 
 app.post("/credential", async function (req, res) {
    var AuthRequest = {
-    "ClientId" : "46u3y9fzft6s5bw8m5h7k8tm",
-    "ClientSecret" : "7NTHDNKKj7ocpkoMlTgeMS5f",
-    "ClinentAuthURL" : "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
+    "ClientId" : req.body.clientid,
+    "ClientSecret" : req.body.clientsecret,
+    "ClinentAuthURL" : req.body.authurl
    }
   //var AuthRequest = {
   //  "ClientId" : "sr7id7zht854bwdco8t9qdym",
