@@ -44,9 +44,9 @@ app.get("/secondpage", function (req, res) {
 
 app.post("/credential", async function (req, res) {
    var AuthRequest = {
-    "ClientId" : req.body.clientid,
-    "ClientSecret" : req.body.clientsecret,
-    "ClinentAuthURL" : req.body.authurl
+    "ClientId" : "4qdbeo2pv92jb8yf2v0pq6zi",
+    "ClientSecret" : "6y9SPiqgG5mjzmptf33PCTvS",
+    "ClinentAuthURL" : "https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"
    }
   //var AuthRequest = {
   //  "ClientId" : "sr7id7zht854bwdco8t9qdym",
@@ -55,7 +55,7 @@ app.post("/credential", async function (req, res) {
   //}
   var NewDEName;
   var AuthResponse = await getacesstoken(AuthRequest);
-  console.log("https://mc6vgk-sxj9p08pqwxqz9hw9-4my.auth.marketingcloudapis.com/"+AuthResponse);
+  console.log("---------------------->"+AuthResponse);
   res.send(AuthResponse);
  
   app.post("/DEListFetch", async (reqCall, resCall) => {
